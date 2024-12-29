@@ -1,5 +1,15 @@
 name: Build Kernel
 on:
+
+  push: 
+    branches:
+          - "KernelSU_Next_suSFS" 
+  pull_request: 
+     branches: 
+          - "kernel-tree_lancelot" 
+     paths:
+          - ".github/workflows/build-kernel.yml"
+
   workflow_dispatch:
 
 jobs:
