@@ -221,7 +221,7 @@ jobs:
       if: env.ENABLE_KERNELSU == 'true'
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel
-        curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -s next-susfs-a13-5.15
+        curl -LSs "https://raw.githubusercontent.com/rifsxd/KernelSU-Next/next/kernel/setup.sh" | bash -s next-susfs-4.19
         if [ -d $GITHUB_WORKSPACE/kernel_workspace/android-kernel/KernelSU ]; then
             cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel/KernelSU
             KSU_VERSION="_$(($(/usr/bin/git rev-list --count HEAD) + 10200))"
